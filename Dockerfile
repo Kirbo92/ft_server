@@ -20,7 +20,7 @@ RUN rm -rf /etc/nginx/sites-available/default && \
 	chmod -R 755 /var/www/* && \
 	service mysql start && \
 	mysql -u root --password= < /tmp/init.sql && \
-	mysql -u root --password= < /tmp/wordpress.sql
+	mysql wordpress -u root --password= < /tmp/wordpress.sql
 
 CMD service nginx start && \
 	service mysql start && \
