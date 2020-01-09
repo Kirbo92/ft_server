@@ -7,7 +7,7 @@ RUN apt update && \
 
 COPY	srcs/index.html /var/www/migferna/html/
 COPY 	srcs/migferna /etc/nginx/sites-available/
-ADD		srcs/wordpress.tar.gz /var/www/migferna/html/
+COPY	srcs/wordpress /var/www/migferna/html/wordpress
 COPY	srcs/phpMyAdmin /var/www/migferna/html/phpMyAdmin
 COPY	srcs/config.inc.php /var/www/migferna/html/phpMyAdmin/
 COPY	srcs/init.sql	/tmp/
